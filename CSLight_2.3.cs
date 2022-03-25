@@ -6,9 +6,12 @@ namespace CSLight_2._3
     {
         static void Main(string[] args)
         {
-            for (int i = 5; i <= 96; i += 7) 
+            int lastNumber = 96;
+            int step = 7;
+            
+            for (int firstNumber = 5; firstNumber <= lastNumber; firstNumber += step) 
             {
-                Console.Write(i + " ");
+                Console.Write(firstNumber + " ");
             }
         }
     }
