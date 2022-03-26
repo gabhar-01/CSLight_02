@@ -23,7 +23,6 @@ namespace CSLight_2._6
             int barkX = 15;
 
             bool isRunning = true;
-
             int userInput;
 
             while (isRunning) 
@@ -122,7 +121,6 @@ namespace CSLight_2._6
                 }
                 Console.Clear();
             }
-
         }
     }
 }
