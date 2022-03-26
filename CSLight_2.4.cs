@@ -6,23 +6,24 @@ namespace CSLight_2._4
     {
         static void Main(string[] args)
         {
-            int multiple3 = 3;
-            int multiple5 = 5;
+            int multiple1 = 3;
+            int multiple2 = 5;
+            int maxNumber = 101;
             int sum = 0;
 
-            Random rand = new Random();
-            int number = rand.Next(0, 101);
+            Random random = new Random();
+            int number = random.Next(multiple1, maxNumber);
 
-
-            for (int i = multiple3; i <= number; i++)
+            for (int i = multiple1; i <= number; i++)
             {
-                if (i % multiple3 == 0 || i % multiple5 == 0) 
+                if (i % multiple1 == 0 || i % multiple2 == 0) 
                 {
                     sum += i;
                 }
             }
 
-            Console.WriteLine("Сумма всех положительных чисел, меньших случайного числа " + number + ", которые кратны 3 или 5, равна " + sum + ".");
+            Console.WriteLine($"Сумма всех положительных чисел, меньших случайного числа {number}," +
+                $"которые кратны {multiple1} или {multiple2}, равна {sum}.");
         }
     }
 }
