@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CSLight_2.4
+namespace CSLight_2._4
 {
     class Program
     {
@@ -8,11 +8,10 @@ namespace CSLight_2.4
         {
             int multiple3 = 3;
             int multiple5 = 5;
-            int sum;
-            int number;
+            int sum = 0;
 
             Random rand = new Random();
-            number = rand.Next(0, 101);
+            int number = rand.Next(0, 101);
 
 
             for (int i = multiple3; i <= number; i++)
@@ -23,7 +22,7 @@ namespace CSLight_2.4
                 }
             }
 
-            Console.WriteLine("Сумма всех положительных чисел, меньших случайного числа " + number + ", и кратных 3 или 5, равна " + sum + ".");
+            Console.WriteLine("Сумма всех положительных чисел, меньших случайного числа " + number + ", которые кратны 3 или 5, равна " + sum + ".");
         }
     }
 }
