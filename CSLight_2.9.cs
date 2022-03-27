@@ -8,20 +8,20 @@ namespace CSLight_2._9
         {
             int minNumber = 1;
             int maxNumber = 27;
-            int N;
+            int number;
 
             Console.WriteLine($"Дано N ({minNumber} <= N <= {maxNumber})");
 
             Random random = new Random();
-            N = random.Next(minNumber, maxNumber+1);
-            Console.WriteLine("N = " + N);
+            number = random.Next(minNumber, maxNumber+1);
+            Console.WriteLine("N = " + number);
 
             int minThreeDigitNaturalNumber = 100;
             int maxThreeDigitNaturalNumber = 999;
 
             int numberCounter = 0;
             
-            for (int i = 0; i <= maxThreeDigitNaturalNumber; i += N)
+            for (int i = 0; i <= maxThreeDigitNaturalNumber; i += number)
             {
                 if (i >= minThreeDigitNaturalNumber)
                 {
