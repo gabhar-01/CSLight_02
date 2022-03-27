@@ -10,14 +10,14 @@ namespace CSLight_2._8
             string userInput;
             int numberOfTries = 3;
 
-            while (numberOfTries !=0 )
+            for (int i = numberOfTries; i > 0; i--)
             {
                 Console.Write("Введите пароль: ");
                 userInput = Console.ReadLine();
 
                 if (userInput == password)
                 {
-                    numberOfTries = 0;
+                    i = 0;
                     Console.WriteLine("Ночью все кошки серы.");
                     Console.ReadKey();
                 }
