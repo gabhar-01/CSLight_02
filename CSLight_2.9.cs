@@ -8,22 +8,27 @@ namespace CSLight_2._9
         {
             int minNumber = 1;
             int maxNumber = 27;
+            int N;
 
             Console.WriteLine($"Дано N ({minNumber} <= N <= {maxNumber})");
+
+            Random random = new Random();
+            N = random.Next(minNumber, maxNumber+1);
+            Console.WriteLine("N = " + N);
 
             int minThreeDigitNaturalNumber = 100;
             int maxThreeDigitNaturalNumber = 999;
 
             int numberCounter = 0;
             
-            for (int i = minNumber; i <= maxNumber; i++)
+            for (int i = 0; i <= maxThreeDigitNaturalNumber; i += N)
             {
-                for (int j = minThreeDigitNaturalNumber; j <= maxThreeDigitNaturalNumber; j += i)
+                if (i >= minThreeDigitNaturalNumber)
                 {
                     numberCounter++;
                 }
             }
-
+           
             Console.WriteLine("Количество трехзначных натуральных чисел, которые кратны N, равно " + numberCounter + ".");
             Console.ReadKey();
         }
