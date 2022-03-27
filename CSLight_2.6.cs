@@ -11,21 +11,21 @@ namespace CSLight_2._6
 
             char dog = '@';
             bool isDogHere = false;
-            int dogY = 15;
-            int dogX = 15;
+            int dogPositionY = 15;
+            int dogPositionX = 15;
 
             string dogName = "";
             bool doesDogHasAName = false;
-            int dogNameY = 14;
-            int dogNameX = 14;
+            int dogNamePositionY = 14;
+            int dogNamePositionX = 14;
 
-            int barkY = 16;
-            int barkX = 15;
+            int barkPositionY = 16;
+            int barkPositionX = 15;
 
             bool isRunning = true;
             int userInput;
 
-            while (isRunning) 
+            while (isRunning)
             {
                 Console.WriteLine("Добро пожаловать на задний двор." +
                 "\n Вы можете: " +
@@ -37,13 +37,13 @@ namespace CSLight_2._6
 
                 if (isDogHere == true) 
                 {
-                    Console.SetCursorPosition(dogY, dogX);
+                    Console.SetCursorPosition(dogPositionY, dogPositionX);
                     Console.WriteLine(dog);
                 }
 
                 if (doesDogHasAName == true)
                 {
-                    Console.SetCursorPosition(dogNameY, dogNameX);
+                    Console.SetCursorPosition(dogNamePositionY, dogNamePositionX);
                     Console.WriteLine(dogName);
                 }
 
@@ -106,7 +106,7 @@ namespace CSLight_2._6
                         }
                         else
                         {
-                            Console.SetCursorPosition(barkY, barkX);
+                            Console.SetCursorPosition(barkPositionY, barkPositionX);
                             Console.WriteLine(" -Гав.");
                             Console.ReadKey();
                             break;
