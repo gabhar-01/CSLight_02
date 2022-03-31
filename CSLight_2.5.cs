@@ -20,6 +20,7 @@ namespace CSLight_2._5
             float eurToRub = 100;
             float eurToUsd = 1.06f;
 
+            int enoughMoney = 0;
             int exchangeAmount;
             int userInput;
             bool isRunning = true;
@@ -48,7 +49,7 @@ namespace CSLight_2._5
                         Console.WriteLine("Обмен рублей на доллары.");
                         Console.Write("Какую сумму рублей вы хотите обменять: ");
                         exchangeAmount = Convert.ToInt32(Console.ReadLine());
-                        if (userRub - exchangeAmount < 0)
+                        if (userRub - exchangeAmount < enoughMoney)
                         {
                             Console.WriteLine("Недостаточно средств для совершения данной операции.");
                             Console.ReadKey();
@@ -64,7 +65,7 @@ namespace CSLight_2._5
                         Console.WriteLine("Обмен рублей на евро.");
                         Console.Write("Какую сумму рублей вы хотите обменять: ");
                         exchangeAmount = Convert.ToInt32(Console.ReadLine());
-                        if (userRub - exchangeAmount < 0)
+                        if (userRub - exchangeAmount < enoughMoney)
                         {
                             Console.WriteLine("Недостаточно средств для совершения данной операции.");
                             Console.ReadKey();
@@ -80,7 +81,7 @@ namespace CSLight_2._5
                         Console.WriteLine("Обмен долларов на рубли.");
                         Console.Write("Какую сумму долларов вы хотите обменять: ");
                         exchangeAmount = Convert.ToInt32(Console.ReadLine());
-                        if (userUsd - exchangeAmount < 0)
+                        if (userUsd - exchangeAmount < enoughMoney)
                         {
                             Console.WriteLine("Недостаточно средств для совершения данной операции.");
                             Console.ReadKey();
@@ -96,7 +97,7 @@ namespace CSLight_2._5
                         Console.WriteLine("Обмен долларов на евро.");
                         Console.Write("Какую сумму долларов вы хотите обменять: ");
                         exchangeAmount = Convert.ToInt32(Console.ReadLine());
-                        if (userUsd - exchangeAmount < 0)
+                        if (userUsd - exchangeAmount < enoughMoney)
                         {
                             Console.WriteLine("Недостаточно средств для совершения данной операции.");
                             Console.ReadKey();
@@ -112,7 +113,7 @@ namespace CSLight_2._5
                         Console.WriteLine("Обмен евро на рубли.");
                         Console.Write("Какую сумму евро вы хотите обменять: ");
                         exchangeAmount = Convert.ToInt32(Console.ReadLine());
-                        if (userEur - exchangeAmount < 0)
+                        if (userEur - exchangeAmount < enoughMoney)
                         {
                             Console.WriteLine("Недостаточно средств для совершения данной операции.");
                             Console.ReadKey();
@@ -128,7 +129,7 @@ namespace CSLight_2._5
                         Console.WriteLine("Обмен евро на доллары.");
                         Console.Write("Какую сумму евро вы хотите обменять: ");
                         exchangeAmount = Convert.ToInt32(Console.ReadLine());
-                        if (userEur - exchangeAmount < 0)
+                        if (userEur - exchangeAmount < enoughMoney)
                         {
                             Console.WriteLine("Недостаточно средств для совершения данной операции.");
                             Console.ReadKey();
